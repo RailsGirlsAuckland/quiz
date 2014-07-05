@@ -1,0 +1,41 @@
+<%= form_for(@question) do |f| %>
+  <% if @question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+      <ul>
+      <% @question.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    What word describes a defect in a program?<br/>
+    <%= f.text_area :question1 %>
+  </div>
+  <div class="field">
+    Is the Ruby programming language for the backend or frontend?<br/>
+    <%= f.text_area :question2 %>
+  </div>
+  <div class="field">
+    Which type would you use to store the value 10.5 in a variable?<br/>
+    <%= f.text_area :question3 %>
+  </div>
+  <div class="field">
+    What do you call a Ruby library?<br/>
+    <%= f.text_area :question4 %>
+  </div>
+  <div class="field">
+    What is the conventional name of the main branch in a git repository?<br/>
+    <%= f.text_area :question5 %>
+  </div>
+  <div class="field">
+    Please enter your name<br/>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit Answers"%>
+  </div>
+<% end %>
