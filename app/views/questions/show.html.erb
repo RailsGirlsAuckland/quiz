@@ -1,28 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Question1:</strong>
+  <strong>What word describes a defect in a program?</strong>
   <%= @question.question1 %>
 </p>
 
 <p>
-  <strong>Question2:</strong>
+  <strong>Is the Ruby programming language for the backend or frontend?</strong>
   <%= @question.question2 %>
 </p>
 
 <p>
-  <strong>Question3:</strong>
+  <strong>Which type would you use to store the value 10.5 in a variable?</strong>
   <%= @question.question3 %>
 </p>
 
 <p>
-  <strong>Question4:</strong>
+  <strong>What do you call a Ruby library?</strong>
   <%= @question.question4 %>
 </p>
 
 <p>
-  <strong>Question5:</strong>
+  <strong>What is the conventional name of the main branch in a git repository?</strong>
   <%= @question.question5 %>
+</p>
+
+<p>
+  <strong>Your name:</strong>
+  <%= @question.name %>
 </p>
 
 <%= link_to 'Edit', edit_question_path(@question) %> |

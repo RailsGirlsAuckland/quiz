@@ -1,5 +1,37 @@
 <h1>Rails Girls Auckland Quiz</h1>
 
+<table>
+  <thead>
+    <tr>
+      <th>Answer1</th>
+      <th>Answer2</th>
+      <th>Answer3</th>
+      <th>Answer4</th>
+      <th>Answer5</th>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.question1 %></td>
+        <td><%= question.question2 %></td>
+        <td><%= question.question3 %></td>
+        <td><%= question.question4 %></td>
+        <td><%= question.question5 %></td>
+        <td><%= question.name %></td>
+        <td><%= link_to 'Show', question %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <br>
 
 <%= link_to 'Take the quiz', new_question_path %>
